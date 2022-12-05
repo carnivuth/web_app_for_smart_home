@@ -1,0 +1,32 @@
+%%%%%%INTRODUZIONE
+\chapter{Angular, libreria e funzionalità}
+\section{Introduzione alla tecnologia}
+Angular è una libreria per lo sviluppo di interfacce web di tipologia s.p.a. (single page application) con paradigma a componenti strutturata per lo sviluppo di software ad alta manutenibilità e prestazioni.
+
+Offre diverse funzionalità tra cui:
+\begin{itemize}
+    \item Sviluppo a componenti concepiti come singoli elementi di visualizzazione dei dati 
+    \item Dependency injection 
+    \item Possibilità di strutturazione dei componenti in raggruppamenti chiamati moduli
+    \item Gestione degli eventi e possibilità di generazione degli stessi
+    \item Routing tra i componenti che compongono la web-app
+    \item Rendering dei componenti del DOM a runtime con monitoraggio delle variazioni e conseguente aggiornamento tramite change detection
+\end{itemize} 
+Le applicazioni Angular sono composte da un insieme di componenti organizzati in moduli che vengono renderizzati in una struttura ad albero, i componenti possono condividere dati tramite le properties e gli eventi.
+\newline
+\newline
+La dependency injection è realizzata tramite i service, classi typescript istanziate dal framework il cui scopo è fornire ai componenti la logica applicativa complessa necessaria al loro funzionamento.
+\newline
+\newline
+I componenti e i service sono raggruppati in moduli i quali fungono da elemento organizzativo dell'applicazione, i moduli stessi possono importare ed esportare componenti e servizi.
+\newline
+\newline
+Il framework consente di effettuare il routing fra i vari componenti dell'applicazione che vengono renderizzati all'interno del DOM, in questo modo è possibile far variare i componenti visualizzati a schermo in base all iterazione con l'utente.
+\newline
+\newline
+Tramite il meccanismo di Change detection, la libreria Angular è in grado di rilevare le modifiche effettuate alle proprietà dei componenti e aggiornare il DOM di conseguenza.
+\newline
+\newline
+La libreria è distribuita come modulo Node.js e sfrutta npm (node packet manager) per la gestione delle dipendenze e l'istallazione di librerie di componenti angular aggiuntivi come per esempio la libreria di componenti nebular.
+\newline
+\newpage

@@ -1,0 +1,27 @@
+\section{Change detection: innesco del meccanismo}
+
+Per poter consentire il corretto avvio del meccanismo la libreria angular modifica il comportamento standard di alcuni metodi di basso livello del motore javascript:
+\begin{itemize}
+    \item Tutti gli eventi del browser (click, mouseover, keyup, etc. )
+    \item Le chiamate ajax HTTP
+    \item I metodi setTimeout() e setInterval()
+\end{itemize}
+Angular inoltre si avvale della libreria zone.js per modificare in maniera trasparente i comportamenti del browser e innescare il meccanismo di change detection come mostrato nell'esempio.
+\newline
+\begin{minted}{javascript}
+        // this is the new version of addEventListener
+function addEventListener(eventName, callback) {
+     // call the real addEventListener
+     callRealAddEventListener(eventName, function() {
+        // first call the original callback
+        callback(...);     
+        // and then run Angular-specific functionality
+        var changed = angular.runChangeDetection();
+         if (changed) {
+             angular.reRenderUIPart();
+         }
+     });
+}
+
+\end{minted}
+\cite{angular-doc}
