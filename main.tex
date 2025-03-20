@@ -1,5 +1,3 @@
-
-
 \documentclass[12pt]{report}
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm,bindingoffset=6mm, includefoot, includehead]{geometry}
 \usepackage[backend=bibtex]{biblatex} %Imports biblatex package
@@ -7,9 +5,8 @@
 
 
 \usepackage[utf8]{inputenc}
-\usepackage[italian]{babel}
-\usepackage{alphabeta}
-\usepackage{minted}
+\usepackage[english]{babel}
+\usepackage{listings}
 \usepackage{graphicx}
 \graphicspath{ {./resources/} }
 
@@ -46,12 +43,12 @@
     citecolor=black,
     colorlinks=true,
     linkcolor=black,
-    filecolor=magenta,      
+    filecolor=magenta,
     urlcolor=black,
     pdftitle={Ottimizzazione Applicazioni Angular},
     pdfpagemode=FullScreen,
     }
-    
+
 \usepackage{minted}
 \usemintedstyle{manni}
 
@@ -144,7 +141,7 @@ Anno Accademico 2021-2022}}
 
 
 
-\tableofcontents 
+\tableofcontents
 
 
 %%%%%%%%%%% Abstract %%%%%%%%%%%%
@@ -153,34 +150,13 @@ Anno Accademico 2021-2022}}
 \mbox{}
 \newpage
 
-\include{fileTex/abstract.tex}
-%%%%%%% INTRODUCITON %%%%%%%%%%%%%%%% 
-\include{fileTex/introduction.tex}
+\include{chapters/abstract.tex}
+\include{chapters/introduction.tex}
 
 %%%%%%%%%% Chapters %%%%%%%%%%
-%%%%%%% WHY ANGULAR %%%%%%%%%%%%%%%% 
-\include{fileTex/Chapter1.1.tex}
-\include{fileTex/Chapter1.2.tex}
-\include{fileTex/Chapter1.3.tex}
-%%%%%%% ANGULAR OVERVIEW %%%%%%%%%%%%%%%% 
-\include{fileTex/Chapter2.1.tex}
-\include{fileTex/Chapter2.2.tex}
-\include{fileTex/Chapter2.3.tex}
-\include{fileTex/Chapter2.4.tex}
-\include{fileTex/Chapter2.5.tex}
-\include{fileTex/Chapter2.6.tex}
-\include{fileTex/Chapter2.7.tex}
-\include{fileTex/Chapter2.8.tex}
-\include{fileTex/Chapter2.9.tex}
-%%%%%%% YOU COOK %%%%%%%%%%%%%%%% 
-\include{fileTex/Chapter3.1.tex}
-\include{fileTex/Chapter3.2.tex}
-\include{fileTex/Chapter3.3.tex}
-\include{fileTex/Chapter3.4.tex}
-\include{fileTex/Chapter3.5.tex}
-\include{fileTex/Chapter3.6.tex}
-
-
+\include{chapters/context_analysis.tex}
+\include{chapters/angular.tex}
+\include{chapters/youcook.tex}
 
 %%%%%%%%%% Conclusions %%%%%%%%%%
 \newpage
@@ -188,13 +164,11 @@ Anno Accademico 2021-2022}}
 \mbox{}
 \newpage
 
-\include{fileTex/conclusions.tex}
+\include{chapters/conclusions.tex}
 
 %%%%%%%%%% Bibliography %%%%%%%%%%%
 \newpage
 
 \printbibliography
-
-
 
 \end{document}
