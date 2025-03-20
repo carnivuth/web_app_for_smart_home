@@ -1,0 +1,33 @@
+---
+name: Release thesis
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    permissions:
+      contents: write
+
+    runs-on: ubuntu-22.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: enable universe repository
+        run: sudo add-apt-repository universe -y && sudo apt update
+
+      - name: Install build dependencies
+        run: sudo apt install -y make latexmk texlive-full
+
+      - name: Build pdf
+        run: make build
+
+      - name: Create release file
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "build/main.pdf"
