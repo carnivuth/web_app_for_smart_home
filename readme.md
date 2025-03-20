@@ -1,4 +1,4 @@
-# applicazioni web per smart home con tecnologia angular
+# Applicazioni web per smart home con tecnologia angular
 
 Lavoro di tesi triennale riguardante lo sviluppo di applicazioni web basate su tecnologia angular
 
